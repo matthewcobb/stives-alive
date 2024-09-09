@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="accent-blue">
+    <header class="border border-b bgGradient-accent-muted">
+      {% include _nav.html %}
+      <div class="content content-thin">
+        <div class="header-text">
+          <h1>
+            {{ page.title }}
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-lg">
+      <div class="article content content-thin">
+        {% for post in site.posts %}
+          <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url }}">Read more</a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if content != "" %}
+    <section class="border border-t">
+      <div class="content content-thin">
+        {{ content}}
+      </div>
+    </section>
+    {% endif %}
+
+    {% include _footer.html %}
+  </body>
+</html>
