@@ -4,13 +4,16 @@
     {% include _head.html %}
   </head>
   <body class="accent-blue">
-    <header class="border border-b bgGradient-accent-muted ">
+    <header class="border border-b bgHeader">
       {% include _nav.html %}
       <div class="content content-thin">
-        <div class="header-text">
-          <h1>
+        <div class="header-text header-text-lg-md text-center">
+          <h1 class="text-hero">
             {{ page.title }}
           </h1>
+          <p class="large mt-sm">
+            {{ page.description }}
+          </p>
         </div>
       </div>
     </header>

@@ -1,11 +1,11 @@
 <nav class="nav-top">
   <div class="content content-thin">
-    <div class="grid grid-middle">
+    <div class="grid gap-md grid-middle">
       <div class="cell-shrink">
-        <p class="large fgColor-accent">St. Ives Alive</p>
+        <p class="large"><b>St. Ives <span class="fgColor-accent">Alive</span></b></p>
       </div>
       <div class="cell">
-        <div class="nav-links">
+        <div class="nav-links hidden-until-md">
           {% assign sorted_pages = site.pages | sort:"order" | filter: "nav_link" != "" %}
           {% for node in sorted_pages %}
             {% if page.url == node.url %}
@@ -19,6 +19,9 @@
             {% endif %}
           {% endfor %}
         </div>
+      </div>
+      <div class="cell-shrink">
+        <a href="#footer" class="btn btn-accent btn-sm">Contact us</a>
       </div>
     </div>
   </div>

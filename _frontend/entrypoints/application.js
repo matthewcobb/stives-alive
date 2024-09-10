@@ -5,5 +5,4 @@
 console.log('Vite ⚡️ Ruby')
 
 // Example: Import a stylesheet in <sourceCodeDir>/index.css
-import "@reedsy/reedsy-lightning/sass/main.scss";
 import '~/sass/index.scss';

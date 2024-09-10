@@ -1,1 +1,16 @@
+@import "@reedsy/reedsy-lightning/sass/main.scss";
 @import 'type';
+
+.bgHeader {
+  width: 100%;
+  background: url('~/images/header.webp') center bottom no-repeat, linear-gradient(var(--accent-muted), transparent);
+  background-size: 170%;
+  min-height: 18rem;
+
+  @include bp(sm) {
+    height: auto;
+    background-size: cover;
+    max-height: 28rem;
+    aspect-ratio: 16/6;
+  }
+}

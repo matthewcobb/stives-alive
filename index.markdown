@@ -3,8 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Keeping St.Ives a residents first community
-nav_link: Home
+title: St. Ives Alive
+description: Putting residents first
+nav_link: About
 order: 0
 ---
 
