@@ -1,3 +1,2 @@
-
 vite: bin/vite dev
-jekyll: bin/jekyll-vite wait && bundle exec jekyll serve --livereload
+jekyll: bin/jekyll-vite wait && tinacms dev -c 'jekyll serve --livereload'
