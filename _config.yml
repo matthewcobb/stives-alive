@@ -32,9 +32,11 @@ twitter_username: jekyllrb
 github_username:  jekyll
 host: localhost
 
+sass:
+  style: "compressed"
+
 # Build settings
 plugins:
-  - jekyll/vite
   - jekyll-feed
 
 # Exclude from processing.
@@ -48,7 +50,6 @@ plugins:
 exclude:
   - bin
   - config
-  - vite.config.ts
   - tmp
   - Procfile.dev
 #   - .sass-cache/

@@ -1,10 +1,13 @@
-@import "_reedsy-lightning.css";
+---
+---
+
+@import "reedsy-lightning";
 @import "breakpoints";
 @import 'type';
 
 .bgHeader {
   width: 100%;
-  background: url('~/images/header.webp') center bottom no-repeat, linear-gradient(var(--accent-muted), transparent);
+  background: url('/images/header.webp') center bottom no-repeat, linear-gradient(var(--accent-muted), transparent);
   background-size: 170%;
   min-height: 18rem;
 

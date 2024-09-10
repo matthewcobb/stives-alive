@@ -1,6 +1,4 @@
-{% vite_client_tag %}
-{% vite_stylesheet_tag application %}
-{% vite_javascript_tag application %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?v={{ site.time | date: '%s' }}" />
 <title>{{ page.title }} - St. Ives Alive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
