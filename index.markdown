@@ -3,9 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: St. Ives Alive
-description: Putting residents first
-nav_link: About
+title: St. Ives Community Action Group
+description: Creating a Sustainable Residential Community
+nav_link: Mission
 order: 0
 ---
 
