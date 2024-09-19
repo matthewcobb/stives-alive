@@ -2,7 +2,18 @@
   <div class="content content-thin">
     <div class="grid gap-md grid-middle">
       <div class="cell-shrink">
-        <p class="large"><b>St. Ives <span class="fgColor-accent">Alive</span></b></p>
+        <div class="grid gap-base grid-middle">
+          <div class="nav-trigger visible-until-md">
+            <svg width="24" height="18">
+              <path id="burger" fill="#2a2a2a" fill-rule="evenodd" d="M1 0h22a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2Zm0 8h22a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2Zm0 8h22a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2Z"/>
+            </svg>
+          </div>
+          <p class="large">
+            <a href="/" class="no-decoration">
+              <b>St. Ives <span class="fgColor-accent">Alive</span></b>
+            </a>
+          </p>
+        </div>
       </div>
       <div class="cell">
         <div class="nav-links hidden-until-md">
@@ -26,3 +37,28 @@
     </div>
   </div>
 </nav>
+
+<div class="nav-mobile">
+  <div class="panel">
+     <div class="panel-header border border-b grid grid-middle no-response text-dark">
+      <div class="cell">
+        <h4>Menu</h4>
+      </div>
+      <div class="cell-shrink">
+        <span class="nav-close">
+          X
+        </span>
+      </div>
+    </div>
+    <div class="panel-body">
+      {% assign sorted_pages = site.pages | sort:"order" | filter: "nav_link" != "" %}
+      {% for node in sorted_pages %}
+        {% if page.url == node.url %}
+          <a href="{{node.url}}" class="nav-link active">{{node.nav_link}}</a>
+        {% else %}
+          <a href="{{node.url}}" class="nav-link">{{node.nav_link}}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

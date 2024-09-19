@@ -17,11 +17,11 @@ layout: default
 
 <section class="section-lg">
   <div class="article content content-thin">
-    {% for post in site.posts %}
-      <div class="post">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url }}">Read more</a>
+    {% for campaign in site.campaigns %}
+      <div class="post article">
+        <h2>{{ campaign.title }}</h2>
+        <p class="mt-sm">{{ campaign.excerpt }}</p>
+        <a href="{{ campaign.url }}">Read more</a>
       </div>
     {% endfor %}
   </div>
@@ -29,7 +29,7 @@ layout: default
 
 {% if content != "" %}
 <section class="border border-t">
-  <div class="content content-thin">
+  <div class="content content-thin article">
     {{ content}}
   </div>
 </section>

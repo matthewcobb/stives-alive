@@ -46,7 +46,7 @@ export function pageFields() {
     }
   ];
 }
-export function postFields() {
+export function campaignFields() {
   return [
     {
       type: "string",

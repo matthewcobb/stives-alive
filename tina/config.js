@@ -2,7 +2,7 @@ import { defineConfig } from "tinacms";
 
 import { homepageFields } from "./templates";
 import { pageFields } from "./templates";
-import { postFields } from "./templates";
+import { campaignFields } from "./templates";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -76,11 +76,11 @@ export default defineConfig({
         ],
       },
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "campaign",
+        label: "Campaigns",
+        path: "_campaigns",
         fields: [
-          ...postFields(),
+          ...campaignFields(),
           {
             type: "rich-text",
             name: "body",

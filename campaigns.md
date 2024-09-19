@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: campaigns
 order: 2
 permalink: /campaigns/
 title: Campaigns
