@@ -1,5 +1,9 @@
 import { defineConfig } from "tinacms";
 
+import { homepageFields } from "./templates";
+import { pageFields } from "./templates";
+import { postFields } from "./templates";
+
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -29,17 +33,54 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        format: "md",
+        label: "Homepage",
+        name: "homepage",
+        path: "/",
+        match: {
+          include: "index",
+        },
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          ...homepageFields(),
+          {
+            type: "rich-text",
+            name: "body",
+            isBody: true,
+          },
+        ],
+      },
+      {
+        format: "md",
+        label: "Pages",
+        name: "pages",
+        path: "/",
+        match: {
+          include: "*",
+          exclude: "index",
+        },
+        fields: [
+          ...pageFields(),
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body of Document",
+            description: "This is the markdown body",
+            isBody: true,
+          },
+        ],
+      },
+      {
         name: "post",
         label: "Posts",
         path: "content/posts",
         fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
+          ...postFields(),
           {
             type: "rich-text",
             name: "body",
